@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 from django.db import models
 from django_pydantic_field import SchemaField
 from pydantic import BaseModel, RootModel
@@ -27,4 +27,4 @@ class SampleArraySchema(RootModel[List[SampleItem]]):
 
 class SampleModel(models.Model):
     title = models.CharField(max_length=255)
-    json: SampleArraySchema = SchemaField()
+    json: Optional[SampleArraySchema] = SchemaField(blank=True, null=True)
