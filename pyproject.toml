@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "django-jsonschema"
+name = "django-sampleproject"
 version = "0.1.0"
 description = ""
 authors = ["Richard <richard@stromer.org>"]
