@@ -1,11 +1,11 @@
-from typing import List, Optional
+from typing import List
 from django.db import models
 from django_pydantic_field import SchemaField
 from pydantic import RootModel
 
 
 class Pets(RootModel):
-    root: List[str]
+    root: List[str] = []
 
     def __iter__(self):
         return iter(self.root)
@@ -15,4 +15,4 @@ class Pets(RootModel):
 
 
 class PetsModel(models.Model):
-    pets: Optional[Pets] = SchemaField(blank=True, null=True)
+    pets: Pets = SchemaField(blank=True, default=Pets())
