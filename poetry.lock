@@ -120,22 +120,26 @@ version = "0.3.3"
 description = "Django JSONField with Pydantic models as a Schema"
 optional = false
 python-versions = ">=3.7"
-files = [
-    {file = "django-pydantic-field-0.3.3.tar.gz", hash = "sha256:dde9df9ad22b00fb246b3010b271f4db34ab4369f6a17e26d00eab0de04150ed"},
-    {file = "django_pydantic_field-0.3.3-py3-none-any.whl", hash = "sha256:1db00a937b3c5f70ae2698a68c96aefa82ac7318dbfbbb5fb78699edbf4f9941"},
-]
+files = []
+develop = false
 
 [package.dependencies]
 django = ">=3.1,<6"
 pydantic = ">=1.10,<3"
-typing-extensions = "*"
+typing_extensions = "*"
 
 [package.extras]
 ci = ["mysqlclient (>=2.1)", "psycopg2-binary (>=2.7,<3)", "psycopg[binary] (>=3.1,<4)"]
 coreapi = ["coreapi"]
 dev = ["black", "build", "django-stubs[compatible-mypy] (>=4.2,<5.0)", "djangorestframework (>=3.11,<4)", "djangorestframework-stubs[compatible-mypy] (>=3.14,<4.0)", "isort", "mypy", "pytest (>=7.4,<8.0)", "pytest-django (>=4.5,<5)"]
-openapi = ["uritemplate"]
-test = ["dj-database-url (>=2.0,<3.0)", "django-pydantic-field[coreapi,openapi]", "djangorestframework (>=3,<4)", "pyyaml", "syrupy (>=3,<5)"]
+openapi = ["inflection", "uritemplate"]
+test = ["dj-database-url (>=2.0,<3.0)", "django_pydantic_field[coreapi,openapi]", "djangorestframework (>=3,<4)", "pyyaml", "syrupy (>=3,<5)"]
+
+[package.source]
+type = "git"
+url = "https://github.com/surenkov/django-pydantic-field"
+reference = "50-editing-a-model-with-custom-root-type-in-django-admin-fails-with-attributeerror-str-object-has-no-attribute-root"
+resolved_reference = "0319fe7e71b019765a28b1850966396e477ea689"
 
 [[package]]
 name = "mypy-extensions"
@@ -336,4 +340,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "19daf336d76266f0ddea3dec01b5a5fe7e25bb8367de7035d75fa4e48ff9aa80"
+content-hash = "2babe143bb65b7188ef17d5b82f2e17f7acdecbf3dcb0fc5b5499e959e657c62"

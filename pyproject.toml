@@ -8,7 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 django = "^5.0.3"
-django-pydantic-field = "^0.3.3"
+django-pydantic-field = { git = "https://github.com/surenkov/django-pydantic-field", branch = "50-editing-a-model-with-custom-root-type-in-django-admin-fails-with-attributeerror-str-object-has-no-attribute-root" }
 
 
 [tool.poetry.group.dev.dependencies]
